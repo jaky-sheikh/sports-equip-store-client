@@ -2,29 +2,29 @@ const products = [
     {
         id: 1,
         name: "Treadmill Housefit Spiro 430",
-        oldPrice: "$ 380.00",
-        newPrice: "$ 369.00",
+        oldPrice: "$380.00",
+        newPrice: "$369.00",
         image: "https://i.ibb.co.com/MkJLf294/tredmill.png",
     },
     {
         id: 2,
         name: "Badminton Racket Yonex",
-        oldPrice: "$ 16.00",
-        newPrice: "$ 10.00",
+        oldPrice: "$16.00",
+        newPrice: "$10.00",
         image: "https://i.ibb.co.com/JjZCH362/pexels-karolina-grabowska-4966371.jpg",
     },
     {
         id: 3,
         name: "Badminton Racket Adidas",
-        oldPrice: "$ 14.00",
-        newPrice: "$ 10.00",
+        oldPrice: "$14.00",
+        newPrice: "$10.00",
         image: "https://i.ibb.co.com/yFXP8gwf/adidas-padel-5018616-1280.jpg",
     },
     {
         id: 4,
         name: "Electric Treadmill Bolt H7",
-        oldPrice: "$ 495.00",
-        newPrice: "$ 450.00",
+        oldPrice: "$495.00",
+        newPrice: "$450.00",
         image: "https://i.ibb.co.com/qFNxcWcB/3d-gym-equipment-23-2151114173.jpg",
     },
 ];
@@ -41,8 +41,8 @@ const TopDeal = () => {
                         <img src={product.image} alt={product.name}
                             className="w-32 h-32 mx-auto mb-4" />
                         <h3>{product.name}</h3>
-                        <p className="text-red-500">
-                            <span className="line-through text-gray-500">{product.oldPrice}</span>{" "}{product.newPrice}
+                        <p className="text-red-500">OldPrice
+                            <span className="line-through text-gray-500"> {product.oldPrice}</span>{" "} NewPrice   {product.newPrice}
                         </p>
                         <button className="btn btn-primary mt-3">Add to cart</button>
                     </div>

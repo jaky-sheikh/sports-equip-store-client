@@ -1,3 +1,4 @@
+import Message from "../components/Message";
 import TopDeal from "../components/TopDeal";
 
 
@@ -45,6 +46,7 @@ const Home = () => {
                 </div>
             </div>
             <TopDeal></TopDeal>
+            <Message></Message>
         </div>
     );
 };
