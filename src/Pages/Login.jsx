@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const Login = () => {
 
-    const { userLogin, setUser } = useContext(AuthContext);
+    const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const emailRef = useRef();
@@ -37,6 +37,15 @@ const Login = () => {
             });
     }
 
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+
+                navigate('/');
+            })
+            .catch(error => console.log('ERROR', error.message))
+    }
+
 
     return (
         <div className="hero bg-base-200 p-5 w-11/12 mx-auto">
@@ -57,7 +66,7 @@ const Login = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <input name="password" type="password" placeholder="password" className="input input-bordered" required />
-                            <label className="label">
+                            {/* <label className="label">
                                 <span
                                     className="label-text-alt link link-hover text-blue-500"
                                     onClick={() =>
@@ -66,7 +75,7 @@ const Login = () => {
                                 >
                                     Forgot password?
                                 </span>
-                            </label>
+                            </label> */}
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
