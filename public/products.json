@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Basketball",
+        "image": "https://i.ibb.co.com/qq1NnRK/Basketball-logo-orange-ball.jpg",
+        "price": 25.99,
+        "details": "Official size and weight basketball suitable for indoor and outdoor play."
+    },
+    {
+        "id": 2,
+        "name": "Yoga Mat",
+        "image": "https://i.ibb.co.com/b5H2qzW6/yoga-mat.jpg",
+        "price": 19.95,
+        "details": "Non-slip, eco-friendly yoga mat with cushioned support for all yoga practices."
+    },
+    {
+        "id": 3,
+        "name": "Tennis Racket",
+        "image": "https://i.ibb.co.com/jk2rDjkq/tennis-racket.jpg",
+        "price": 89.99,
+        "details": "High-performance graphite tennis racket designed for intermediate to advanced players."
+    },
+    {
+        "id": 4,
+        "name": "Soccer Cleats",
+        "image": "https://i.ibb.co.com/1J4HyndN/88412057-JEMA-SVA-006-08.jpg",
+        "price": 54.50,
+        "details": "Lightweight soccer cleats with durable synthetic uppers and molded studs for firm ground traction."
+    },
+    {
+        "id": 5,
+        "name": "Gym Dumbbells",
+        "image": "https://i.ibb.co.com/pj1CHL5T/24209.jpg",
+        "price": 49.95,
+        "details": "Set of two rubber-coated dumbbells in various weights, ideal for strength training at home or the gym."
+    },
+    {
+        "id": 6,
+        "name": "Swimming Goggles",
+        "image": "https://i.ibb.co.com/hFz1Hsc4/131939.jpg",
+        "price": 12.99,
+        "details": "Anti-fog swimming goggles with UV protection lenses and adjustable silicone straps for a comfortable fit."
+    }
+]
