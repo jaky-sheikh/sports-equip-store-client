@@ -3,17 +3,35 @@ import { Link } from "react-router-dom";
 
 const AllEquipment = () => {
     const [products, setProducts] = useState([]);
+    const [sortedProducts, setSortedProducts] = useState([]);
 
     useEffect(() => {
         fetch("products.json")
             .then((res) => res.json())
-            .then((data) => setProducts(data))
+            .then((data) => {
+                setProducts(data);
+                setSortedProducts(data);
+            })
             .catch((error) => console.error("Error fetching data:", error));
     }, []);
+
+    const handleSortByPrice = () => {
+        const sorted = [...products].sort((a, b) => a.price - b.price);
+        setSortedProducts(sorted);
+    };
 
     return (
         <div className="container mx-auto my-8">
             <h2 className="text-3xl font-bold text-center mb-6">All Sports Equipment</h2>
+            <div className="text-center mb-4">
+                <button
+                    onClick={handleSortByPrice}
+                    className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600"
+                >
+                    Sort by Price
+                </button>
+            </div>
+
             <table className="min-w-full bg-white border border-gray-200">
                 <thead>
                     <tr>
@@ -24,7 +42,7 @@ const AllEquipment = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {products.map((product) => (
+                    {sortedProducts.map((product) => (
                         <tr key={product.id}>
                             <td className="py-2 px-4 border-b">{product.name}</td>
                             <td className="py-2 px-4 border-b">${product.price}</td>
