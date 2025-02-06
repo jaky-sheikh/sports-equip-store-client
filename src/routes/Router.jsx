@@ -7,6 +7,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import AllEquipment from "../components/AllEquipment";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allEquipment',
-                element: <h2></h2>
+                element: <AllEquipment></AllEquipment>
             },
             {
                 path: '/addEquipment',

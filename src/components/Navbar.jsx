@@ -12,9 +12,9 @@ const Navbar = () => {
             <div><h3 className="text-xl text-orange-600">EquiSports</h3></div>
             <div className="nav space-x-3 font-semibold">
                 <Link to="/">Home</Link>
-                <Link to="/about">All Sports Equipment</Link>
-                <Link to="/service">Add Equipment</Link>
-                <Link to="/profile">My Equipment List</Link>
+                <Link to="/allEquipment">All Sports Equipment</Link>
+                <Link to="/addEquipment">Add Equipment</Link>
+                <Link to="/equipmentList">My Equipment List</Link>
             </div>
             <div className="flex">
                 {user && user?.email ? (
