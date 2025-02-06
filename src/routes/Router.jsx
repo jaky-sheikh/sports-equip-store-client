@@ -1,7 +1,11 @@
+import ProductDetails from "../components/ProductDetails";
+import AuthLayout from "../Layout/AuthLayout";
 import Home from "../Layout/Home";
 import MainLayout from "../Layout/MainLayout";
 
 import { createBrowserRouter } from "react-router-dom";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 const router = createBrowserRouter([
     {
@@ -24,12 +28,26 @@ const router = createBrowserRouter([
                 path: '/equipmentList',
                 element: <h2></h2>
             },
-            {
-                path: '/products',
-                element: <h2>Products</h2>
-            },
 
         ]
+    },
+    {
+        path: '/products/:id',
+        element: <ProductDetails></ProductDetails>
+    },
+    {
+        path: "auth",
+        element: <AuthLayout></AuthLayout>,
+        children: [
+            {
+                path: "/auth/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/auth/register",
+                element: <Register></Register>
+            },
+        ],
     },
     {
         path: '*',
