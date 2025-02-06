@@ -6,6 +6,7 @@ import MainLayout from "../Layout/MainLayout";
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -33,7 +34,9 @@ const router = createBrowserRouter([
     },
     {
         path: '/products/:id',
-        element: <ProductDetails></ProductDetails>
+        element: <PrivateRoute>
+            <ProductDetails></ProductDetails>
+        </PrivateRoute>
     },
     {
         path: "auth",
