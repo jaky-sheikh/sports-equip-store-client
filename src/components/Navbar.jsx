@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import logo from "../assets/medal.png";
+import { Bounce } from "react-awesome-reveal";
 
 const Navbar = () => {
 
@@ -11,7 +12,7 @@ const Navbar = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center w-11/12 mx-auto py-4">
             <div className="flex justify-center items-center">
                 <img className="w-10" src={logo} alt="" />
-                <h3 className="text-xl text-orange-600">EquiSports</h3>
+                <Bounce><h3 className="text-xl text-orange-600">EquiSports</h3></Bounce>
             </div>
             <div className="nav space-x-3 font-semibold">
                 <Link to="/">Home</Link>

@@ -1,3 +1,4 @@
+import { Bounce, Fade } from "react-awesome-reveal";
 
 
 const Message = () => {
@@ -10,7 +11,8 @@ const Message = () => {
             </div>
             <div className="mt-4">
                 <h2 className="text-lg md:text-2xl font-semibold">For football fans and sporting aces</h2>
-                <p className="text-sm md:text-base">Your heart beats for the round leather ball? Ours too! </p>
+                <Fade><p className="text-sm md:text-base">Your heart beats for the round leather ball? </p></Fade>
+                <Bounce><p className="text-sm md:text-base text-red-600">Ours too!</p></Bounce>
             </div>
             <div className="mt-4">
                 <h2 className="text-lg md:text-2xl font-semibold">Score now and get your benefits!</h2>

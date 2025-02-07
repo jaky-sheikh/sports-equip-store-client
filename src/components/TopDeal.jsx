@@ -1,3 +1,5 @@
+import { Slide } from "react-awesome-reveal";
+
 const products = [
     {
         id: 1,
@@ -33,7 +35,7 @@ const products = [
 const TopDeal = () => {
     return (
         <div className="container mx-auto px-4 md:px-8 lg:px-16 my-10">
-            <h2 className="text-4xl text-center text-red-600 my-4">Top Deal</h2>
+            <Slide><h2 className="text-4xl text-center text-red-600 my-4">Top Deal</h2></Slide>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-center mx-auto">
                 {products.map((product) => (
                     <div key={product.id}
