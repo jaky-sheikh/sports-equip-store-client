@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+import Lottie from "lottie-react";
+import registerLottieData from "../assets/lottie/register.json";
 
 
 const Register = () => {
@@ -69,10 +70,11 @@ const Register = () => {
     return (
         <div className="hero bg-base-200 w-11/12 mx-auto p-5">
             <div className="hero-content flex-col">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Register</h1>
+                <div className="text-center lg:text-left max-w-96">
+                    <Lottie animationData={registerLottieData}></Lottie>
                 </div>
                 <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
+                    <h1 className="text-5xl font-bold text-center">Register</h1>
                     <form onSubmit={handleSubmit} className="card-body">
                         <div className="form-control">
                             <label className="label">
