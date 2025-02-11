@@ -1,3 +1,5 @@
+
+import { Bounce } from "react-awesome-reveal";
 import logo from "../assets/medal.png";
 
 const Footer = () => {
@@ -5,7 +7,7 @@ const Footer = () => {
         <div className="w-11/12 mx-auto mt-6">
             <footer className="footer sm:footer-horizontal footer-center bg-primary text-primary-content p-10">
                 <aside>
-                    <img className="w-10" src={logo} alt="" />
+                    <Bounce><img className="w-10" src={logo} alt="" /></Bounce>
                     <p className="text-xl">
                         EquiSports.
                         <br />

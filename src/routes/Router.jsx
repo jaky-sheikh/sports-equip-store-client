@@ -8,6 +8,8 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import AllEquipment from "../components/AllEquipment";
+import AddEquipment from "../Pages/AddEquipment";
+
 
 const router = createBrowserRouter([
     {
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addEquipment',
-                element: <h2></h2>
+                element: <PrivateRoute><AddEquipment></AddEquipment></PrivateRoute>
             },
             {
                 path: '/equipmentList',

@@ -6,6 +6,7 @@ import Slider from "../components/Slider";
 import TopDeal from "../components/TopDeal";
 
 
+
 const Home = () => {
     return (
         <div className="w-11/12 mx-auto">
