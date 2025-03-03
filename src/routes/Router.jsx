@@ -11,6 +11,7 @@ import AllEquipment from "../components/AllEquipment";
 import AddEquipment from "../Pages/AddEquipment";
 
 
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -29,8 +30,9 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><AddEquipment></AddEquipment></PrivateRoute>
             },
             {
-                path: '/equipmentList',
-                element: <h2></h2>
+                path: '/myEquipmentList',
+                element: <h2>Hello</h2>
+
             },
 
         ]

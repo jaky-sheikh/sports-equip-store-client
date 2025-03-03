@@ -18,6 +18,23 @@ const AllEquipment = () => {
     const handleSortByPrice = () => {
         const sorted = [...products].sort((a, b) => a.price - b.price);
         setSortedProducts(sorted);
+
+
+        fetch('http://localhost:5000/api/products', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(sorted),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Optionally handle success response
+            })
+            .catch((error) => {
+                console.error('Error sending data to server:', error);
+            });
     };
 
     return (

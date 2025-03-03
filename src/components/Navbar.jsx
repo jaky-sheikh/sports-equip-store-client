@@ -18,7 +18,7 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
                 <Link to="/allEquipment">All Sports Equipment</Link>
                 <Link to="/addEquipment">Add Equipment</Link>
-                <Link to="/equipmentList">My Equipment List</Link>
+                <Link to="/myEquipmentList">My Equipment List</Link>
             </div>
             <div className="flex">
                 {user && user?.email ? (
