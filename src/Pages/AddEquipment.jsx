@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 
 const AddEquipment = () => {
+
+    const { user } = useContext(AuthContext);
 
     const handleAddEquipment = event => {
         event.preventDefault();
@@ -60,8 +64,8 @@ const AddEquipment = () => {
                 <input type="text" name="customization" placeholder="Customization" className="input input-bordered w-full" />
                 <input type="text" name="processingTime" placeholder="Processing Time" className="input input-bordered w-full" />
                 <input type="number" name="stockStatus" placeholder="Stock Status" className="input input-bordered w-full" />
-                <input type="email" name="userEmail" className="input input-bordered w-full bg-gray-200" readOnly />
-                <input type="text" name="userName" className="input input-bordered w-full bg-gray-200" readOnly />
+                <input defaultValue={user.email} type="email" name="userEmail" className="input input-bordered w-full bg-gray-200" readOnly />
+                <input defaultValue={user.displayName} type="text" name="userName" className="input input-bordered w-full bg-gray-200" readOnly />
                 <button type="submit" className="btn btn-primary">Add Equipment</button>
             </form>
         </div>
