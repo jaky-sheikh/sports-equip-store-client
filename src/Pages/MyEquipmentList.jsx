@@ -15,6 +15,16 @@ const MyEquipmentList = () => {
         }
     }, [user]);
 
+    const handleDelete = (id) => {
+        fetch(`http://localhost:5000/equipments/${id}`, {
+            method: 'DELETE',
+        })
+            .then(() => {
+                setEquipments(equipments.filter(item => item._id !== id));
+            })
+            .catch(err => console.error(err));
+    }
+
     return (
         <div className="container mx-auto p-4">
             <h2 className="text-2xl font-bold mb-4">My Equipment List</h2>
