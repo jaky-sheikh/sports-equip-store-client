@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const MyEquipmentList = () => {
 
@@ -16,14 +17,33 @@ const MyEquipmentList = () => {
     }, [user]);
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/equipments/${id}`, {
-            method: 'DELETE',
-        })
-            .then(() => {
-                setEquipments(equipments.filter(item => item._id !== id));
-            })
-            .catch(err => console.error(err));
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/equipments/${id}`, {
+                    method: 'DELETE',
+                })
+                    .then(() => {
+                        setEquipments(equipments.filter(item => item._id !== id));
+
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your equipment has been deleted.",
+                            icon: "success"
+                        });
+                    })
+                    .catch(err => console.error(err));
+            }
+        });
     }
+
 
     return (
         <div className="container mx-auto p-4">
