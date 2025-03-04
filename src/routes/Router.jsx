@@ -9,6 +9,7 @@ import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import AllEquipment from "../components/AllEquipment";
 import AddEquipment from "../Pages/AddEquipment";
+import MyEquipmentList from "../Pages/MyEquipmentList";
 
 
 
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/myEquipmentList',
-                element: <h2>Hello</h2>
+                element: <PrivateRoute><MyEquipmentList></MyEquipmentList></PrivateRoute>
 
             },
 
