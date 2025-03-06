@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const MyEquipmentList = () => {
 
@@ -57,12 +58,13 @@ const MyEquipmentList = () => {
                         <p>{equipment.description}</p>
                         <p>Price: ${equipment.price}</p>
                         <div className="flex justify-between mt-2">
-                            <button
-                                onClick={() => handleUpdate(equipment._id, { name: "Updated Name" })}
-                                className="bg-blue-500 text-white px-3 py-1 rounded"
-                            >
-                                Update
-                            </button>
+                            <Link to={`/updateEquipment/${equipment._id}`}>
+                                <button
+                                    className="bg-blue-500 text-white px-3 py-1 rounded"
+                                >
+                                    Update
+                                </button>
+                            </Link>
                             <button
                                 onClick={() => handleDelete(equipment._id)}
                                 className="bg-red-500 text-white px-3 py-1 rounded"
