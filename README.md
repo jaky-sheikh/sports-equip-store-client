@@ -1,8 +1,10 @@
-# React + Vite
+EquiSports
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+live link: https://sports-store-68afc.web.app/
 
-Currently, two official plugins are available:
+Backend based 
+Responsive
+Decorated with react lottie, swiper slider
+Used various technology
+React dom based web site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
