@@ -20,7 +20,7 @@ const AllEquipment = () => {
         setSortedProducts(sorted);
 
 
-        fetch('http://localhost:5000/api/products', {
+        fetch('https://sports-equipment-store.vercel.app/api/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

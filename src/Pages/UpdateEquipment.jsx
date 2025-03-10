@@ -45,7 +45,7 @@ const UpdateEquipment = () => {
         const updatedEquipments = { image, itemName, categoryName, description, price, rating, customization, processingTime, stockStatus };
         // // console.log(updatedEquipments);
 
-        fetch(`http://localhost:5000/equipment/${id}`, {
+        fetch(`https://sports-equipment-store.vercel.app/equipment/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
